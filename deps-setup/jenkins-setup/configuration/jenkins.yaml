@@ -84,6 +84,10 @@ jobs:
             scriptPath('Jenkinsfile')
           }
         }
+
+        triggers {
+          githubPush()
+        }
       }
 
 unclassified:
@@ -153,4 +157,3 @@ credentials:
               id: "ADMIN_PASSWORD"
               secret: "${ADMIN_PASSWORD}"
               description: "Application admin password"
-              
